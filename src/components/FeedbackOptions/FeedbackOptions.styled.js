@@ -14,6 +14,7 @@ export const FeedbackBtn = styled.button`
     width: 100px;
     height: 40px;
     cursor: pointer;
+    font-weight: ${p => p.theme.fontWeights.bold};
     border: ${p => p.theme.borders.normal};
     border-radius: ${p => p.theme.radii.normal};
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
