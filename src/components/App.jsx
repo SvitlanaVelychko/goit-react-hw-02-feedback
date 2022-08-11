@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import FeedbackOptions from './FeedbackOptions';
 import Statistics from './Statistics';
-import Notification from './Notification';
 import { GlobalStyle } from "./GlobalStyle";
 import { Box } from "./Box";
 
@@ -44,14 +43,12 @@ export class App extends Component {
         <FeedbackOptions
           options={keys}
           onLeaveFeedback={this.handleFeedbackClick} />
-        {this.countTotalFeedback() > 0 ?
-          (<Statistics
+        <Statistics
             good={good}
             neutral={neutral}
             bad={bad}
             total={this.countTotalFeedback}
-            positivePercentage={this.countPositiveFeedbackPercentage} />) :
-          <Notification message="There is no feedback" />}
+            positivePercentage={this.countPositiveFeedbackPercentage} />
         <GlobalStyle />
       </Box>
     );
