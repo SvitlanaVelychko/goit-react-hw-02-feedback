@@ -40,6 +40,7 @@ export class App extends Component {
 
     return (
       <Box as="main" backgroundColor="bgc">
+        <h1 style={{ display: "none" }}>Feedback</h1>
         <FeedbackOptions
           options={keys}
           onLeaveFeedback={this.handleFeedbackClick} />
